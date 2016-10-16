@@ -18,7 +18,7 @@ public class Principal {
 	private void validarRotas() throws FileNotFoundException {
 		Analise<Rotas> analise = new AnaliseRotas();
 		LerArquivo<Rotas> ler = new LerArquivo<>("routes.txt", analise);
-		ler.skipLine(); // Pula a primeira linha do arquivo
+		ler.skipLine(); // Pula a primeira linha do arquivo.
 		while (ler.hasNext()) {
 			Rotas rota = ler.readObject();
 			System.out.println(rota);
