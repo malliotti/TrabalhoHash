@@ -4,11 +4,11 @@ public class RobinHoodHash {
 
 	public  void insere (String key, String value){
 		String entrada;
-		String probe;
 		
+		String i;
 		if (tabela.cheia()){
 			rehash();
-			h = hash(key);
+			String h = hash(key);
 			entrada = HashEntry(key, value, h);
 			i = mod(h & 0x7ffffff, tabela.length);
 		}
@@ -22,6 +22,11 @@ public class RobinHoodHash {
 	}
 	}// Fim do public void insere.
 	
+	private void rehash() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	public void consulta(String key) -> value{
 	    h = hash(key);
 	    	    i = mod(h & 0x7ffffff, tabela.length);
