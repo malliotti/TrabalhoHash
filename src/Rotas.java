@@ -37,8 +37,38 @@ public class Rotas {
 
 	@Override
 	public String toString() {
-		return "Rotas [route_id=" + route_id + ", " + "route_short_name=" + route_short_name + ", " + "route_long_name="
-				+ route_long_name + ", " + "route_type=" + route_type + ", " + "route_color=" + route_color + "]";
-		
+		return "Rotas [route_id=" + route_id + ", " + "route_short_name=" + route_short_name + ", " + "route_long_name=" + route_long_name + ", " + "route_type=" + route_type + ", " + "route_color="
+				+ route_color + "]";
+
 	}
+
+	public String getRoute_id() {
+		return route_id;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((route_id == null) ? 0 : route_id.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Rotas other = (Rotas) obj;
+		if (route_id == null) {
+			if (other.route_id != null)
+				return false;
+		} else if (!route_id.equals(other.route_id))
+			return false;
+		return true;
+	}
+
 }
