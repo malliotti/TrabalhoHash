@@ -57,7 +57,7 @@ public class Principal {
 				break;
 
 			default:
-				System.out.println("Op��o inv�lida.");
+				System.out.println("Opcao Invalida.");
 			}
 		} while (opcao != 0);
 
@@ -74,6 +74,7 @@ public class Principal {
 		System.out.println("4. Consulta");
 		System.out.println("5. Lista Completa");
 		System.out.print("Opcao: ");
+
 	}
 
 	public static void exit() {
@@ -97,32 +98,64 @@ public class Principal {
 		System.out.println("Exclusao");
 	}
 
+	/*
+	 * public static void consulta() {
+	 * 
+	 * entrada = new Scanner(System.in);
+	 * System.out.print("Informe o id que deseja pesquisar: "); String valor =
+	 * entrada.next(); Rotas rota = new Rotas(valor, "", "", 0, "");
+	 * 
+	 * double l1 = System.currentTimeMillis();
+	 * 
+	 * for (int i = 0; i < 1000; i++) { r1 = rotas.get(valor);
+	 * 
+	 * } System.out.println(r1);
+	 * 
+	 * double l2 = System.currentTimeMillis();
+	 * 
+	 * double l3 = System.currentTimeMillis(); for (int i = 0; i < 1000; i++) {
+	 * int indice = rotasLinked.indexOf(rota); if (indice >= 0) { r2 =
+	 * rotasLinked.get(indice); } } double l4 = System.currentTimeMillis();
+	 * 
+	 * System.out.println(); System.out.println("Hash demorou " + ((l2 - l1) /
+	 * 1000) + " segundos para pesquisar"); System.out.println("Linked demorou "
+	 * + ((l4 - l3) / 1000) + " segundos para pesquisar"); System.out.println();
+	 * }
+	 */
+
 	public static void consulta() {
 		entrada = new Scanner(System.in);
-		System.out.print("Informe o id que deseja pesquisar: ");
+		System.out.print("Informe o id que deseja pesquisar:");
 		String valor = entrada.next();
-
 		Rotas rota = new Rotas(valor, "", "", 0, "");
 
 		double l1 = System.currentTimeMillis();
+		Rotas r1 = null;
 		for (int i = 0; i < 1000; i++) {
-			r1 = rotas.get(rota);
+			r1 = rotas.get(valor);
 		}
-
+		if (r1 != null) {
+			System.out.println("R1 = " + r1);
+		}
 		double l2 = System.currentTimeMillis();
-
+		System.out.println("Hash demorou " + ((l2 - l1) / 1000) + " segundos para pesquisar");
+		System.out.println();
+		
+		
 		double l3 = System.currentTimeMillis();
+		Rotas r2 = null;
 		for (int i = 0; i < 1000; i++) {
 			int indice = rotasLinked.indexOf(rota);
 			if (indice >= 0) {
 				r2 = rotasLinked.get(indice);
 			}
 		}
+		if (r2 != null) {
+			System.out.println("R2 = " + r2);
+		}
 		double l4 = System.currentTimeMillis();
-		System.out.println();
-		System.out.println("Hash demorou " + ((l2 - l1) / 1000) + " segundos para pesquisar");
 		System.out.println("Linked demorou " + ((l4 - l3) / 1000) + " segundos para pesquisar");
-		System.out.println();
+
 	}
 
 	public static void printlinked() {
