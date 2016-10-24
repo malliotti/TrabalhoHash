@@ -57,20 +57,21 @@ public class Principal {
 				break;
 
 			default:
-				System.out.println("Opcao Invalida.");
+				System.out.println(">>>>> Opcao Invalida. <<<<<");
 			}
 		} while (opcao != 0);
 
 	}
 
 	public static void menu() {
+		System.out.println();
 		System.out.println("\t===============");
 		System.out.println("\tRotas de Onibus");
 		System.out.println("\t===============");
 		System.out.println("0. Fim");
-		System.out.println("1. Inclui");
-		System.out.println("2. Altera");
-		System.out.println("3. Exclui");
+		System.out.println("1. Inclui - Em Desenvolvimento");
+		System.out.println("2. Altera - Em Desenvolvimento");
+		System.out.println("3. Exclui - Em Desenvolvimento");
 		System.out.println("4. Consulta");
 		System.out.println("5. Lista Completa");
 		System.out.print("Opcao: ");
@@ -86,16 +87,28 @@ public class Principal {
 	public static void inclui() {
 		System.out.println();
 		System.out.println("Inclusao");
+		System.out.println("Em desenvolvimento");
+		System.out.println();
+		System.out.println();
+		
 	}
 
 	public static void altera() {
 		System.out.println();
 		System.out.println("Alteracao.");
+		System.out.println("Em desenvolvimento");
+		System.out.println();
+		System.out.println();
+		
 	}
 
 	public static void exclui() {
 		System.out.println();
 		System.out.println("Exclusao");
+		System.out.println("Em desenvolvimento");
+		System.out.println();
+		System.out.println();
+		
 	}
 
 	/*
@@ -122,7 +135,7 @@ public class Principal {
 	 * + ((l4 - l3) / 1000) + " segundos para pesquisar"); System.out.println();
 	 * }
 	 */
-
+	
 	public static void consulta() {
 		entrada = new Scanner(System.in);
 		System.out.print("Informe o id que deseja pesquisar. Ex.: D73: ");
@@ -136,6 +149,7 @@ public class Principal {
 		}
 		
 		if (r1 != null) {
+			System.out.println();
 			System.out.println("R1 = " + r1);
 		}
 		double l2 = System.currentTimeMillis();

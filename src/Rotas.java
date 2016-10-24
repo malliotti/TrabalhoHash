@@ -37,7 +37,7 @@ public class Rotas {
 
 	@Override
 	public String toString() {
-		return "Rotas [route_id=" + route_id + ", " + "route_short_name=" + route_short_name + ", " + "route_long_name=" + route_long_name + ", " + "route_type=" + route_type + ", " + "route_color="
+		return "Rota [route_id=" + route_id + ", " + "route_short_name=" + route_short_name + ", " + "route_long_name=" + route_long_name + ", " + "route_type=" + route_type + ", " + "route_color="
 				+ route_color + "]";
 
 	}
