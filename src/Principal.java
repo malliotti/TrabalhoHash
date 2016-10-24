@@ -125,7 +125,7 @@ public class Principal {
 
 	public static void consulta() {
 		entrada = new Scanner(System.in);
-		System.out.print("Informe o id que deseja pesquisar:");
+		System.out.print("Informe o id que deseja pesquisar. Ex.: D73: ");
 		String valor = entrada.next();
 		Rotas rota = new Rotas(valor, "", "", 0, "");
 
@@ -134,6 +134,7 @@ public class Principal {
 		for (int i = 0; i < 1000; i++) {
 			r1 = rotas.get(valor);
 		}
+		
 		if (r1 != null) {
 			System.out.println("R1 = " + r1);
 		}
